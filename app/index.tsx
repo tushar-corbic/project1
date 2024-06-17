@@ -1,15 +1,11 @@
 import { Text, View } from "react-native";
-
+import Navigation from "../navigation/navigation";
+import Login from "../screens/authentication/Login";
+import OtpVerification from "@/screens/authentication/OtpVerification";
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit .</Text>
-    </View>
+    // <Navigation />
+    <Login></Login>
+    // <OtpVerification></OtpVerification>
   );
 }
