@@ -2,12 +2,12 @@
 import React, {useState, useRef, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, View, ActivityIndicator} from 'react-native';
-import RNOtpVerify from 'react-native-otp-verify';
-import {
-    getHash,
-    startOtpListener,
-    useOtpVerify,
-  } from 'react-native-otp-verify';
+// import RNOtpVerify from 'react-native-otp-verify';
+// import {
+//     getHash,
+//     startOtpListener,
+//     useOtpVerify,
+//   } from 'react-native-otp-verify';
 import {GenericStyles} from '../../styles/GenericStyles';
 import {
   NavigationHeader,

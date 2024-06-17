@@ -9,12 +9,15 @@ const Stack = createNativeStackNavigator();
 function Navigation() {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
-      </Stack.Navigator> */}
       <Stack.Navigator>
-        <Stack.Screen name="OtpVerification" component={OtpVerification} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+      {/* <Stack.Navigator>
+        <Stack.Screen name="OtpVerification" component={OtpVerification} />
+      </Stack.Navigator> */}
     </NavigationContainer>
   );
 }

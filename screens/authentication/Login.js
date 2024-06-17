@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 // import { TextInput } from "react-native-gesture-handler";
 import React, { useState } from "react"
 import { GenericStyles } from "@/styles/GenericStyles";
-const Login = () => {
+const Login = ({ navigation }) => {
     const [number, setNumber] = useState("")
     const handleNumberChange = (text) => {
         setNumber(text);
@@ -16,6 +16,7 @@ const Login = () => {
     const handleSubmitMobileButton = () => {
         console.log("clicking on submit mobile button")
         // have to navigate to otp screen
+        navigation.navigate("TEMP")
     }
     return (
         <View style={styles.container}>
@@ -51,32 +52,34 @@ const Login = () => {
                         <Text style={{ color: "white" }}>Login with mobile</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={[styles.justifyContentCenterAlignItemsCenter, GenericStyles.pt10, GenericStyles.pb10, GenericStyles.flex8]} >
-                    <Text style={GenericStyles.mb12}> or continue with</Text>
-                    <View style={{ flexDirection: "row" }}>
-                        <TouchableOpacity>
-                            <View style={styles.ssoButton}>
+
+
+                <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "center", flex: 8, paddingTop:10 }} >
+                    <View styles={{ justifyContent: "center", alignItems: "center" }}>
+
+                        <Text style={{ marginLeft: 20 }}> or continue with</Text>
+                        <View style={{ flexDirection: "row", flexWrap: 'wrap' }}>
+                            <TouchableOpacity style={styles.ssoButton}>
                                 <Image
                                     source={require("../../assets/images/cross_icon.png")}
                                 />
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={styles.ssoButton}>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.ssoButton}>
                                 <Image
                                     source={require("../../assets/images/close_icon.png")}
                                 />
-                            </View>
-                        </TouchableOpacity>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </View>
-                <View style={{ justifyContent: "center", alignItems: "center", flex: 1 }}>
+                <View style={{ justifyContent: "center", alignItems: "center", flex: 2 , marginTop:60}}>
                     <TouchableOpacity onPress={handleHaveAAccountEvent}>
                         <Text style={{ color: "blue" }}>
                             I have an account
                         </Text>
                     </TouchableOpacity>
                 </View>
+
             </View>
         </View>
     )
@@ -152,17 +155,14 @@ const styles = StyleSheet.create({
         backgroundColor: "grey",
     },
     ssoButton: {
-        borderRadius: 40,
+        borderRadius: 100,
         borderColor: "black",
         borderWidth: 2,
         padding: 10,
         margin: 10,
+
         width: windowHeight(0.08),
         height: windowHeight(0.08)
-    },
-    justifyContentCenterAlignItemsCenter: {
-        justifyContent: "center",
-        alignItems: "center"
     }
 })
 export default Login;
