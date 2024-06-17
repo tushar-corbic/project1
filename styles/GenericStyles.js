@@ -20,8 +20,17 @@ export const GenericStyles = StyleSheet.create({
   mr12: {
     marginRight: 12,
   },
+  mt20:{
+    marginTop:20
+  },
+  pb10:{
+    paddingBottom:10
+  },
   mt12: {
     marginTop: 12,
+  },
+  pt10:{
+    paddingTop:10
   },
   mt24: {
     marginTop: 24,
@@ -69,6 +78,9 @@ export const GenericStyles = StyleSheet.create({
     backgroundColor: colors.LIGHT_RED,
     padding: 8,
     borderRadius: 2,
+  },
+  flex8:{
+    flex:8
   },
   // use CustomCard when background is non-white else use this style
   card: {
